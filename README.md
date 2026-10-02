@@ -11,13 +11,13 @@ The repository also contains the benchmark instances used for the three problem 
 
 ## Problem variants
 
-All decision variables satisfy $x\in\{-1,0,1\}^n$.
+All decision variables satisfy $x\in \lbrace{-1,0,1 \rbrace}^n$.
 
 | Variant | Formulation | Main solver | Experiment script |
 |---|---|---|---|
-| QUTO | $\min\;x^\top Qx+c^\top x$ | `solve_ternary_mosek_unc.m` | `run_SDP_TQP_QUTO.m` |
-| TQP-Linear | $\min\;x^\top Qx+c^\top x$ subject to $\mathbf{1}^\top x=0$ | `solve_ternary_mosek_sum.m` | `run_SDP_TQP_Linear.m` |
-| TQP-Ratio | $\min\;(x^\top Ax+a^\top x+a_0)/(x^\top Bx+b^\top x+b_0)$ | `solve_ternary_mosek_ratio.m` | `run_SDP_TQP_Ratio.m` |
+| QUTO | $\min x^\top Qx+c^\top x$ | `solve_ternary_mosek_unc.m` | `run_SDP_TQP_QUTO.m` |
+| TQP-Linear | $\min x^\top Qx+c^\top x$ subject to $\mathbf{1}^\top x=0$ | `solve_ternary_mosek_sum.m` | `run_SDP_TQP_Linear.m` |
+| TQP-Ratio | $\min (x^\top Ax+a^\top x+a_0)/(x^\top Bx+b^\top x+b_0)$ | `solve_ternary_mosek_ratio.m` | `run_SDP_TQP_Ratio.m` |
 
 
 ## Method
@@ -160,7 +160,7 @@ If you use this code or the benchmark instances, please cite:
 > F. de Meijer, V. Piccialli, R. Sotirov, and A. M. Sudoso, “Beyond Binarity: Semidefinite Programming for Ternary Quadratic Problems” 2026. arXiv preprint arXiv:2603.28979
 
 ```bibtex
-@unpublished{deMeijer2026BeyondBinarity,
+@article{deMeijer2026BeyondBinarity,
   author = {Frank de Meijer and Veronica Piccialli and Renata Sotirov and Antonio M. Sudoso},
   title  = {Beyond Binarity: Semidefinite Programming for Ternary Quadratic Problems},
   year   = {2026},
